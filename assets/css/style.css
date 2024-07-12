@@ -1444,6 +1444,55 @@ a:hover {
             font-size: 1rem;
             margin: 3px
         }
+
+/*--------------------------------------------------------------
+# Skill Badge Pill
+--------------------------------------------------------------*/
+
+.certificates-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+.certificates-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.certificate-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+.certificate-card img {
+  border-radius: 10px 10px 0 0;
+}
+.certificate-card-body {
+  padding: 20px;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.resume-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+.resume-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.resume-section p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.resume-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
