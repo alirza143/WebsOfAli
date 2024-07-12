@@ -159,13 +159,24 @@
   const typed = select('.typed')
   if (typed) {
     let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
+    typed_strings = typed_strings.split(',');
+
+    var learn_more_button = select('#learn-more-button');
+    learn_more_button.classList.add('d-none');
+    
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
-      backDelay: 2000
+      backDelay: 2000,
+      onStringTyped: (arrayPod, self) => {
+        if(typed_strings.length -1 == arrayPod){
+          learn_more_button.classList.remove('d-none');
+        } else {
+          learn_more_button.classList.add('d-none');
+        }
+      },
     });
   }
 
@@ -221,6 +232,14 @@
     });
   }
 
+  var server_counter = select('#server-counter');
+  if(server_counter) {
+    setTimeout(function(){
+      if(server_counter.getAttribute('data-purecounter-end') == server_counter.textContent){
+        $('#server-counter').text("Uncountable")
+      }
+    },1500)
+  }
   /**
    * Initiate Pure Counter 
    */
