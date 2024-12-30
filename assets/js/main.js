@@ -235,8 +235,8 @@
   var server_counter = select('#server-counter');
   if(server_counter) {
     setTimeout(function(){
-      if(server_counter.getAttribute('data-purecounter-end') == server_counter.textContent){
-        $('#server-counter').text("Uncountable")
+      if(server_counter.getAttribute('data-purecounter-end')){
+        $('#server-counter').text("Countless")
       }
     },1500)
   }
